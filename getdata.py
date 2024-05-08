@@ -6,12 +6,12 @@ def getdata_datastore_license_curr(conn):
     # Create a cursor object
     cursor = conn.cursor()
 
-    # Execute a query to select data from table - leapdata
-    cursor.execute("SELECT * FROM leapdata LIMIT 100")
+    # Execute a query to select data from table - innovation
+    cursor.execute("SELECT * FROM innovation LIMIT 100")
 
     # Load the data into a DataFrame
     df1 = pd.DataFrame(cursor.fetchall())
-    print(df1)
+    #print(df1)
 
     # Close the cursor and connection
     cursor.close()
