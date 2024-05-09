@@ -5,13 +5,14 @@ import model
 # Create a connection object
 conn = db_connector.connect()
 
-# Get data
-df = getdata.getdata_datastore_license_curr(conn)
-df.to_csv('file1.csv')
-#print(df)
+# # Get data
+# df = getdata.getdata_datastore_license_curr(conn)
+# df.to_csv('file2.csv')
+# #print(df)
 
 # Call clustering algorithm from model.py
-clusters = model.clustering_algorithm(df)
+model.clustering_algorithm("file2.csv")
+#model.gaussianMixture("file2.csv")
 
 # test ML model using test data
 
