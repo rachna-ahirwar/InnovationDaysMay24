@@ -7,11 +7,11 @@ def getdata_datastore_license_curr(conn):
     cursor = conn.cursor()
 
     # Execute a query to select data from table - innovation
-    cursor.execute("SELECT * FROM innovation LIMIT 100")
+    cursor.execute("SELECT * FROM innovation_mfg_reports LIMIT 2000")
 
     # Load the data into a DataFrame
     df1 = pd.DataFrame(cursor.fetchall())
-    #print(df1)
+    print(df1)
 
     # Close the cursor and connection
     cursor.close()

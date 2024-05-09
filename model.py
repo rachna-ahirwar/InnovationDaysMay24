@@ -10,30 +10,28 @@ import matplotlib.pyplot as plt
 def clustering_algorithm(data):
     return data
 
-# import pandas as pd
-# from sklearn.cluster import AffinityPropagation
-# from sklearn.preprocessing import StandardScaler
+import pandas as pd
+from sklearn.cluster import AffinityPropagation
+from sklearn.preprocessing import StandardScaler
 
 # # Load your CSV data
-# data = pd.read_csv('your_data.csv')
+data = pd.read_csv('file1.csv')
 
 # # Assuming your data has features in all columns
-# X = data.values
+X = data.values
 # # Scale the features
-# scaler = StandardScaler()
-# X_scaled = scaler.fit_transform(X)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
 
 # # Initialize and fit Affinity Propagation model
-# affinity_propagation = AffinityPropagation()
-# affinity_propagation.fit(X_scaled)
+affinity_propagation = AffinityPropagation()
+affinity_propagation.fit(X_scaled)
 
 # # Get cluster labels
-# cluster_labels = affinity_propagation.labels_
+cluster_labels = affinity_propagation.labels_
 
 # # Add cluster labels to your original dataframe
-# data['Cluster'] = cluster_labels
+data['Cluster'] = cluster_labels
 
 # # Now data contains your original data with an additional column 'Cluster' indicating the cluster each data point belongs to
-# print(data.head())
-
-
+print(data.head())
