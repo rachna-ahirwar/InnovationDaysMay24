@@ -11,8 +11,7 @@ from numpy import unique
 from numpy import where
 from matplotlib import pyplot
 
-# TODO: clustering algorithm - affinity propagation
-
+# clustering algorithm - affinity propagation
 def clustering_algorithm(filename):
     # # Load your CSV data
     data = pd.read_csv(filename)
@@ -30,7 +29,7 @@ def clustering_algorithm(filename):
     #X_scaled = scaler.fit_transform(X)
 
     # # Initialize and fit Affinity Propagation model
-    affinity_propagation = AffinityPropagation(damping=0.99, max_iter=1000)
+    affinity_propagation = AffinityPropagation(damping=0.8, max_iter=1000)
     affinity_propagation.fit(X)
 
     # # Get cluster labels
